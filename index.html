@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -14,7 +13,7 @@ HTML
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            font-family: "Helvetica Neue", Arial, sans-serif;
+            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
         }
         .container {
             width: 100%;
@@ -34,28 +33,36 @@ HTML
             height: auto;
             display: block;
         }
-        .contact-info {
+        .contact-section {
             margin: 40px 0;
             text-align: center;
-            letter-spacing: 0.1em;
-            line-height: 2;
+            line-height: 1.8;
+            letter-spacing: 0.05em;
         }
-        .contact-info a {
+        .contact-item {
+            margin-bottom: 15px;
+        }
+        .contact-item a {
             color: #000;
             text-decoration: none;
             font-weight: bold;
-            border-bottom: 2px solid #EBFF00;
             font-size: 1.1rem;
+            border-bottom: 2px solid #EBFF00; /* 柠檬黄下划线 */
+        }
+        .address-text {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
         }
         .footer {
             font-size: 0.7rem;
-            color: #999;
-            margin-bottom: 30px;
+            color: #ccc;
+            margin-bottom: 40px;
             text-transform: uppercase;
         }
         @media (min-width: 769px) {
             picture img {
-                max-width: 900px;
+                max-width: 850px; /* 电脑端不让图太大，保持精致感 */
                 margin-top: 5vh;
             }
         }
@@ -65,13 +72,20 @@ HTML
 
     <div class="container">
         <picture>
-            <source srcset="hengban.jpg" media="(min-width: 769px)">
-            <img src="竖版.jpg" alt="I’m fun. 株式会社">
+            <source srcset="card-d.jpg" media="(min-width: 769px)">
+            <img src="card-m.jpg" alt="I’m fun. 株式会社">
         </picture>
 
-        <div class="contact-info">
-            <a href="mailto:nofun@live.cn">nofun@live.cn</a><br>
-            <span style="font-size: 0.9rem; color: #666;">Osaka, Japan</span>
+        <div class="contact-section">
+            <div class="contact-item">
+                <a href="mailto:nofun@live.cn">nofun@live.cn</a>
+            </div>
+            <div class="contact-item">
+                <a href="tel:07035422345">Tel: 070-3542-2345</a>
+            </div>
+            <div class="address-text">
+                Osaka, Japan
+            </div>
         </div>
 
         <div class="footer">
